@@ -6,6 +6,7 @@
 *.so
 *.jpg
 *.list
+*.weights
 darknet/mnist/
 darknet/data/
 darknet/caffe/
