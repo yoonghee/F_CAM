@@ -4,18 +4,18 @@
 *.out
 *.png
 *.so
-mnist/
+darknet/mnist/
 darknet/data/
-caffe/
-grasp/
-images/
-opencv/
-convnet/
-decaf/
-submission/
+darknet/caffe/
+darknet/grasp/
+darknet/images/
+darknet/opencv/
+darknet/convnet/
+darknet/decaf/
+darknet/submission/
 darknet/cfg/
-build/darknet/*
-!build/darknet/YoloWrapper.cs
+darknet/build/darknet/*
+!darknet/build/darknet/YoloWrapper.cs
 .fuse*
 
 # OS Generated #
