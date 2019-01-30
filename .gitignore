@@ -17,8 +17,6 @@ darknet/convnet/
 darknet/decaf/
 darknet/submission/
 darknet/cfg/
-darknet/build/darknet/*
-!darknet/build/darknet/YoloWrapper.cs
 .fuse*
 
 # OS Generated #
