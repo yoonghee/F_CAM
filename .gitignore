@@ -4,6 +4,8 @@
 *.out
 *.png
 *.so
+*.jpg
+*.list
 darknet/mnist/
 darknet/data/
 darknet/caffe/
