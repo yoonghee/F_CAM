@@ -1,0 +1,155 @@
+git init --bare remote # bare - 저장소로서의 기능만 수행하는 옵션 
+
+git remote add origin /c/Users/yoong/Desktop/test/remote # 원격 저장소 지정
+
+git remote -v # 경로확인 origin 경로 별명
+
+(master)
+git remote remove origin  
+
+git push  # local -> remote로 업로드, matching->simple방식의 push (엄격)
+
+git push --set-upstream origin master # push 명령하면 자동으로 origin으로 푸쉬하겠다는것임
+
+git log # remote가서 확인해보면 로그가 남아잇음 push한것
+
+git log --reverse #log를 거꾸로 보는 방법
+
+# src가 궁금하면 commit code를 복사해서 git checkout (commit code)로 확인하면됨 - log가 그떄로 돌아감
+
+git clone https://github.com/git/git.git gitsrc # 복제해서 원하는곳에 저장하는 명령어
+
+--- 백업 또는 협업하기 위한 원격 저장소 --- 
+
+
+mkdir gitfth
+git init .
+f1.txt
+git add f1.txtgit commit -m '1'
+
+#첫번째줄 복사
+git remote add origin https://github.com/yoonghee/gitfth.git
+
+git remote # origin 원격저장소가 만들어짐
+
+git remote -v # 상세보기
+
+git remote remove name #으로 지우고 싶은거 지울수 있음
+
+git push -u origin master # -u는 한번만 쓰면되고 master branch로 push한다, 이 다음부터는 push만 하면 자동으로됨
+
+'''
+git remote add origin https://github.com/yoonghee/F_CAM.git
+git push -u origin master # 에러남
+'''
+
+git commit -am 2 # 위에서 push 한다음엔 git push만 해주면됨
+
+-------------- 다른 컴퓨터에서 할경우 --------
+
+mkdir gitfth2
+
+cd gitfth2
+
+git clone https://github.com/yoonghee/F_CAM.git . # 현제 디렉토리
+
+git remote -v # remote local이 이미 연결되어 있는것을 확인할 수 있다.
+
+-------------- 동기화 방법 -------
+하나의 원격저장소를 매개로 작업을 동기화하는 방법
+1.주소를 복사한 후 두개의 local저장소를 만들어 보겠습니다.
+git clone https://github.com/yoonghee/F_CAM.git git_home
+git clone https://github.com/yoonghee/F_CAM.git git_office
+git commit -am 2
+git commit --amend # commit message 바꾸는 방법 
+git push 
+git pull # 다른 local에서 바뀐 내용을 받아옴
+
+- git pull을 해서 변경된것 받아오고 작업을 하고 push를 하고 하면됨
+
+
+---------- ssh로 원격 저장소에 접속하는 방법 --------
+clone or download에서 use ssh - https 대등한 레벨의 통신관계
+로그인을 일일이 하지 않아도 됨 - 자동 로그인 편의기능 제공
+
+ssh-keygen # 경로 잘보고 enter 3번 하면 생성됨
+id_rsa -> local 컴퓨터 , id_rsa.pub -> 서버 컴퓨터, 두개가 생김 cd ~/.ssh
+
+cat id_rsa.pub -> 복사해서 깃헙으로 들어가서 settings -> ssh and gpg keys -> new ssh key -> 이름적고 -> key에 복사한거 붙여넣기
+-깃허브의 원격저장소에 자동로그인하여 접속이 가능해짐
+-새로운 repository ssh사용으로 주소복사
+-git clone 주소 붙여 넣기 git_home 하고 commit push하면됨
+
+---------- 원격 저장소의 원리 -----------
+local저장소를 만들고 commit까지 한 후
+git remote add origin https://github.com/yoonghee/F_CAM_code.git
+upstream local저장소에 연결되어있는 branch
+git push --set-upstream origin master
+
+fetch-first에러
+git pull origin master 실행
+
+non-fast-forward 에러
+- 원격과 local 저장소의 공통분모가 없는 상태에서 병합하려는 시도로 발생
+- 기본적으로 관련 없는 두 저장소를 병합하는 것은 안되도록 설정되어 있음
+- 아래 명령어로 관련없던 두 저장소를 병합하도록 허용
+git pull origin master --allow-unrelated-histories
+
+gistory - config 주소내용등이 저장되어있고, 누가 push했는지 확인할 수 있음
+
+'''
+  221  mkdir git
+  222  cd git
+  223  git init repo
+  224  cd repo
+  225  vim f1.txt
+  226  git add f1.txt
+  227  git commit -m 1
+  228  git remote add origin https://github.com/yoonghee/F_CAM_code.git
+  234  git pull origin master
+  236  git pull origin master --allow-unrelated-histories
+  237  git push --set-upstream origin master
+  238  git log --decorate --graph
+  239  history
+
+'''
+
+----------- 원격 저장소 -> local 저장소로 가져올떄 fetch, pull ----
+git pull, git fetch
+git pull
+git log --decorate --all --oneline
+pull 하기 전으로 되돌리고 싶으면 ORIG_HEAD참고해서 바꾸면됨
+
+git fetch
+local은 pull하기 전 log의 commit을 가리킴 
+원격 저장소는 새로 commit된것을 가리킴
+-master에는 변화를 안주는 방법
+git diff HEAD origin/master로 차이점 비교
+git merge origin/master하면 pull한것과 같은 상태가됨
+
+
+---------- git tag 기본 사용법 ------------
+git tag 1.0.0 (commit id) 하면 master branch가 가리키고 있는 commit이 save됨
+release 버전 배포할때 쓰임
+git checkout 1.0.0으로 돌아갈 수 있음
+git checkout master
+
+tag에 설명을 달고 싶을 때
+annontated tag VS light weight tag
+git tag -a 1.1.0 -m "bug fix" (commit id)
+git tag -v 1.1.0 으로 내용확인가능
+git push --tags
+
+---------- rebase -------------
+merge
+git checkout exp, git merge master
+두 commit을 조상으로 가지게 됨
+
+
+rebase
+base는 commit이 분기되기 직전 commit을 가리킴
+git checkout exp, git rebase master
+- exp에서 만들어진 commit이 임시저장소로 저장되고(temp) exp가 master로 바뀜
+temp가 master branch가 가리키는 곳과 merge되고 exp의 최신커밋과 merge되고 exp가 최신커밋을 가리킴 
+- 역사를 파악하기 좋다는 장점, 어렵고 위험하다는 단점
+
