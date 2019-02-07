@@ -1,0 +1,8 @@
+C:\opencv\build\x64\vc14\bin
+C:\opencv\build\include
+
+darknet_no_gpu.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74
+
+opencv\build\include
+
+opencv\build\x64\vc14\lib

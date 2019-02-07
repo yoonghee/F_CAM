@@ -1,0 +1,35 @@
+﻿  http_stream.cpp
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cuda_fp16.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+C:\Users\yoong\Desktop\darknet\include\darknet.h(48): warning C4091: 'typedef ': ignored on left of 'network_state' when no variable is declared
+c:\opencv_3.0\opencv\build\include\opencv2\flann\result_set.h(306): warning C4003: not enough actual parameters for macro 'max'
+c:\opencv_3.0\opencv\build\include\opencv2\flann\result_set.h(428): warning C4003: not enough actual parameters for macro 'max'
+c:\opencv_3.0\opencv\build\include\opencv2\flann\lsh_index.h(203): warning C4003: not enough actual parameters for macro 'max'
+c:\opencv_3.0\opencv\build\include\opencv2\flann\lsh_index.h(269): warning C4003: not enough actual parameters for macro 'max'
+..\..\src\http_stream.cpp(110): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+..\..\src\http_stream.cpp(190): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(229): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(239): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(252): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(253): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+..\..\src\http_stream.cpp(253): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(291): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+..\..\src\http_stream.cpp(369): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(403): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(414): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(415): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(416): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+..\..\src\http_stream.cpp(416): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(428): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(429): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+..\..\src\http_stream.cpp(429): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+..\..\src\http_stream.cpp(517): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+..\..\src\http_stream.cpp(611): warning C4244: 'return': conversion from '__int64' to 'double', possible loss of data
+  Generating code
+c:\users\yoong\desktop\darknet\src\gemm.c(1649): warning C4752: found Intel(R) Advanced Vector Extensions; consider using /arch:AVX
+c:\users\yoong\desktop\darknet\src\gemm.c(1562): warning C4752: found Intel(R) Advanced Vector Extensions; consider using /arch:AVX
+  193 of 1201 functions (16.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    80 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  darknet.vcxproj -> C:\Users\yoong\Desktop\darknet\build\darknet\x64\darknet.exe
+  darknet.vcxproj -> C:\Users\yoong\Desktop\darknet\build\darknet\x64\darknet.pdb (Full PDB)

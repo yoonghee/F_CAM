@@ -1,0 +1,160 @@
+﻿  activations.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  activation_layer.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  art.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  avgpool_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  batchnorm_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  blas.c
+c:\darknet-master\src\blas.c(99): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(122): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(115): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(136): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(157): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(232): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(225): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(242): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(243): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(253): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(264): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\blas.c(296): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  box.c
+c:\darknet-master\src\box.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  captcha.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  cifar.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  classifier.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  coco.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  col2im.c
+c:\darknet-master\src\col2im.c(34): warning C4244: '함수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  compare.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  connected_layer.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  convolutional_layer.c
+c:\darknet-master\src\cuda.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  cost_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  cpu_gemm.c
+  crnn_layer.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  crop_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  cuda.c
+c:\darknet-master\src\cuda.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  컴파일하고 있습니다...
+  darknet.c
+c:\darknet-master\src\darknet.c(5): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  data.c
+c:\darknet-master\src\data.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory
+  deconvolutional_layer.c
+c:\darknet-master\src\cuda.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  demo.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  detection_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  detector.c
+c:\darknet-master\src\detector.c(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  dice.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  dropout_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  gemm.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  getopt.c
+  go.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  gru_layer.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  im2col.c
+  image.c
+c:\darknet-master\src\image.c(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  list.c
+c:\darknet-master\src\option_list.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  local_layer.c
+c:\darknet-master\src\cuda.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  matrix.c
+c:\darknet-master\src\matrix.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  maxpool_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  network.c
+c:\darknet-master\src\network.c(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  컴파일하고 있습니다...
+  nightmare.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  normalization_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  option_list.c
+c:\darknet-master\src\option_list.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  parser.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  region_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  reorg_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  reorg_old_layer.c
+c:\darknet-master\src\image.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  rnn.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  rnn_layer.c
+c:\darknet-master\src\activations.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  rnn_vid.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  route_layer.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  shortcut_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  softmax_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  super.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  swag.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  tag.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  tree.c
+c:\darknet-master\src\tree.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  upsample_layer.c
+c:\darknet-master\src\cuda.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  utils.c
+c:\darknet-master\src\utils.c(107): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(212): warning C4244: '초기화 중': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(213): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(360): warning C4267: '함수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(372): warning C4477: 'printf' : 서식 문자열 '%ld'에 'long' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  c:\darknet-master\src\utils.c(372): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+c:\darknet-master\src\utils.c(378): warning C4267: '함수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(408): warning C4267: '함수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(419): warning C4267: '함수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(430): warning C4267: '함수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(440): warning C4267: '함수': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(493): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(494): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(495): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(566): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(567): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(575): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(587): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(582): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(605): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(619): warning C4244: '함수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(672): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(682): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\darknet-master\src\utils.c(723): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  voxel.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  컴파일하고 있습니다...
+  writing.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  yolo.c
+c:\darknet-master\src\network.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory
+  yolo_layer.c
+c:\darknet-master\src\layer.h(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'darknet.h': No such file or directory

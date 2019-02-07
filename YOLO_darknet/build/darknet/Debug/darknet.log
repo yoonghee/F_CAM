@@ -1,0 +1,1 @@
+﻿C:\Users\Playdata\Desktop\darknet-master\build\darknet\darknet.vcxproj(55,5): error MSB4019: 가져온 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.props" 프로젝트를 찾을 수 없습니다. <Import> 선언에 지정한 경로가 올바른지 그리고 파일이 디스크에 있는지 확인하세요.
