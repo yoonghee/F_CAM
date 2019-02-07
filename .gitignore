@@ -1,0 +1,31 @@
+*.o
+*.dSYM
+*.csv
+*.out
+*.png
+*.so
+*.jpg
+*.list
+*.weights
+darknet/mnist/
+darknet/data/
+darknet/caffe/
+darknet/grasp/
+darknet/images/
+darknet/opencv/
+darknet/convnet/
+darknet/decaf/
+darknet/submission/
+darknet/cfg/
+.fuse*
+
+# OS Generated #
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# CMake #
+cmake-build-debug/
+CMakeLists.txt
