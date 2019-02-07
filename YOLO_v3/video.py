@@ -13,6 +13,7 @@ from darknet import Darknet
 import pickle as pkl
 import pandas as pd
 import random
+import csv
 
 def arg_parse():
     """
@@ -29,17 +30,16 @@ def arg_parse():
                         default = "cfg/yolov3.cfg", type = str)
     parser.add_argument("--weights", dest = 'weightsfile', help = 
                         "weightsfile",
-                        default = "member1.weights", type = str)
+                        default = "yolov3.weights", type = str)
     parser.add_argument("--reso", dest = 'reso', help = 
                         "Input resolution of the network. Increase to increase accuracy. Decrease to increase speed",
                         default = "416", type = str)
-    parser.add_argument("--video", dest = "videofile", help = "Video file to     run detection on", default = "15sec.mp4", type = str)
+    parser.add_argument("--video", dest = "videofile", help = "Video file to     run detection on", default = "1080_3sec.mp4", type = str)
     
     return parser.parse_args()
     
 args = arg_parse()
-#batch_size = int(args.bs)
-batch_size = int(16)
+batch_size = int(args.bs)
 confidence = float(args.confidence)
 nms_thesh = float(args.nms_thresh)
 start = 0
@@ -47,8 +47,8 @@ CUDA = torch.cuda.is_available()
 
 
 
-num_classes = 1
-classes = load_classes("data/twice.names")
+num_classes = 10
+classes = load_classes("data/coco.names")
 
 
 
@@ -73,9 +73,17 @@ model.eval()
 
 
 
-def write(x, results):
+def write(x, results, frames):
     c1 = tuple(x[1:3].int())
     c2 = tuple(x[3:5].int())
+
+    x_1 = c1[0].numpy()
+    y_1 = c1[1].numpy()
+    x_2 = c2[0].numpy()
+    y_2 = c2[1].numpy()
+    wid = x_2-x_1
+    hei = y_2-y_1
+
     img = results
     cls = int(x[-1])
     color = random.choice(colors)
@@ -85,6 +93,13 @@ def write(x, results):
     c2 = c1[0] + t_size[0] + 3, c1[1] + t_size[1] + 4
     cv2.rectangle(img, c1, c2,color, -1)
     cv2.putText(img, label, (c1[0], c1[1] + t_size[1] + 4), cv2.FONT_HERSHEY_PLAIN, 1, [225,255,255], 1);
+
+    f = open('./loc_test.csv','a')
+    csvWriter = csv.writer(f)
+        
+    csvWriter.writerow([frames, label, x_1, y_1, wid, hei])
+    f.close()
+
     return img
 
 ############################################################################################
@@ -177,10 +192,10 @@ while cap.isOpened():
             output[i, [2,4]] = torch.clamp(output[i, [2,4]], 0.0, im_dim[i,1])
         
 
-        classes = load_classes('data/twice.names')
+        classes = load_classes('data/coco.names')
         colors = pkl.load(open("pallete", "rb"))
 
-        list(map(lambda x: write(x, frame), output))
+        list(map(lambda x: write(x, frame, frames), output))
         
         cv2.imshow("frame", frame)
         #####################################################################################
@@ -199,7 +214,7 @@ while cap.isOpened():
         
     else:
         image_folder = 'content/sample_data_out/'
-        video_name = 'content/sample_data_out/15sec.avi'
+        video_name = 'content/sample_data_out/1080_3sec.avi'
 
         images = [img for img in os.listdir(image_folder) if img.endswith(".jpg")]
         images = sorted(images, key=lambda x: float(os.path.split(x)[1][:-3]))
@@ -214,7 +229,7 @@ while cap.isOpened():
         video.release()
         break
 
-    #############################################################################################
+############################################################################################
 '''
 왜 안돌아가는지 모름, 아마도 코덱문제 mp4관련 ffmpeg window에 설치는 했음
 print('All Frames Saved...')
@@ -229,10 +244,8 @@ images = list(glob.iglob(os.path.join('content/sample_data_out/', '*.*')))
 # Sort the images by name index.
 images = sorted(images, key=lambda x: float(os.path.split(x)[1][:-3]))
 print(images)
-make_video(os.path.join('/content/sample_data_out/','15sec.avi'), images, fps=24)
+make_video(os.path.join('/content/sample_data_out/','1080_3sec.avi'), images, fps=24)
 #############################################################################################    
 '''
-
-
 
 
