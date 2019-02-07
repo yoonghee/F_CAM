@@ -1,0 +1,24 @@
+﻿  main.cpp
+main.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+main.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+main.cpp(158): warning C4244: '=': conversion from 'unsigned long' to 'float', possible loss of data
+main.cpp(161): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+main.cpp(205): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+main.cpp(352): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+main.cpp(352): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+main.cpp(425): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+main.cpp(425): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+main.cpp(493): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+main.cpp(493): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+main.cpp(554): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(554): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+main.cpp(555): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(555): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+main.cpp(662): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  8 of 964 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    39 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  yolo_mark.vcxproj -> C:\Users\yoong\Desktop\Yolo_mark-master\x64\Release\yolo_mark.exe
+  yolo_mark.vcxproj -> C:\Users\yoong\Desktop\Yolo_mark-master\x64\Release\yolo_mark.pdb (Full PDB)
