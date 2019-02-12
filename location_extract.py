@@ -152,7 +152,7 @@ def write_csv(df, name):
 
 
 def main():
-    data = pd.read_csv('loc_4k.csv',header=None)
+    data = pd.read_csv('loc_1080_0211.csv',header=None)
     data.columns=['frame','name','x','y','w','h']
 
     member = ["tzuyu","nayeon","jeongyeon","dahyun","sana","jihyo","momo","mina","chaeyoung"]
