@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="css3/pro.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="/pathToFile/jquery.keyframes.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+ <meta charset="utf-8">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header">
+    <img src="profile/logo.PNG" width="100" height="55" style="margin-left: 15px; margin-top: 5px">
+  </div>
+
+  <div class="content">
+    <div class="origin_heart" >
+      <video
+        id="video" controls="false" src="1080_debug_50400.mp4">
+      </video>
+
+      <button class="open-button" onclick="openForm()">Debug mode</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+        <div id="debug_log_1"></div>
+        <div id="debug_log_2"></div>
+        <div id="debug_log_3"></div>
+        <div id="debug_log_4"></div>
+        <div id="debug_log_5"></div>
+        <div id="debug_log_6"></div>
+        <div id="debug_log_7"></div>
+        <div id="debug_log_8"></div>
+        <div id="debug_log_9"></div>
+        <div id="debug_log_10"></div>
+        <div id="debug_log_11" style="color:red;font:bold;"></div>
+        <div id="debug_log_12"></div>
+        <div id="debug_log_13"></div>
+        <div id="debug_log_14"></div>
+        <div id="debug_log_15"></div>
+        <div id="debug_log_16"></div>
+        <div id="debug_log_17"></div>
+        <div id="debug_log_18"></div>
+        <div id="debug_log_19"></div>
+        <div id="debug_log_20"></div>
+        <div id="debug_log_21"></div>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>  
+        </form>
+      </div>
+
+    <div class="like_overlay">
+      <div class="containeras">
+        <table class="table">
+          <thead>
+            <tr>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="danger">
+              <td id="1_rank" ></td>
+              <td id="1_rank_2" style="text-align:left"></td>
+            </tr>      
+            <tr class="success">
+              <td id="2_rank"></td>
+              <td id="2_rank_2" style="text-align:left"></td>            
+            </tr>
+              <tr >
+            <td id="3_rank"></td>
+            <td id="3_rank_2" style="text-align:left"></td>          
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+    </div>
+  </div>
+</div>
+
+  <div class="sidebar">
+    <div id = heart  class="bg_heart" onclick="add_click()">
+      <canvas id="canvas" width="1980" height="1080" ></canvas>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button id="sana_btn" class="btn btn-danger btn-xs">사나</button>
+    <button id="mina_btn" class="btn btn-danger btn-xs">미나</button>
+    <button id="jihyo_btn" class="btn btn-danger btn-xs">지효</button>
+    <button id="jeongyeon_btn" class="btn btn-danger btn-xs">정연</button>
+    <button id="nayeon_btn" class="btn btn-danger btn-xs">나연</button>
+    <button id="momo_btn" class="btn btn-danger btn-xs">모모</button>
+    <button id="dahyun_btn" class="btn btn-danger btn-xs">다현</button>
+    <button id="tzuyu_btn" class="btn btn-danger btn-xs">쯔위</button>
+    <button id="chaeyoung_btn" class="btn btn-danger btn-xs">채영</button>
+  </div>
+
+  <a>
+    <img class="sana1" src="profile/sana.PNG" style="display:inline; position: absolute; top: 100px; left: 1099px; display: none; background-size: contain; width: 388px; height:574px;  "/ >
+    <img class="mina1" src="profile/mina.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/ >
+    <img class="jihyo1" src="profile/jihyo.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+    <img class="jeongyeon1" src="profile/jeongyeon.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/ >
+    <img class="nayeon1" src="profile/nayeon.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+    <img class="momo1" src="profile/momo.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+    <img class="dahyun1" src="profile/dahyun.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+    <img class="tzuyu1" src="profile/tzuyu.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+    <img class="chaeyoung1" src="profile/chaeyoung.PNG" style="display:inline; position: absolute; top: 100px; left: 1097px; display: none; background-size: contain; width: 388px; height:576px;"/>
+  </a>
+
+  <div class = "ad">
+    <a href="https://www.lge.co.kr/lgekor/product/mobile/smart-phone/productDetail.do?cateId=0210&prdId=EPRD.318023" target="_blank" id = "ad">
+      <video class="ad_video" id="ad_videos" autoplay="autoplay" loop width="1080" height="570"
+      style="position: relative; top: 15px; left: -290px;  width: 560; height: 600; min-width: 600; min-height:800;  "> 
+          <source src="ad1.mp4" type="video/mp4" />
+      </video>
+    </a>
+  </div>  
+</div>
+</body>
+
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
+<script type="text/javascript">
+var loc = $('#heart');
+var l = 0;
+var count = 0;
+
+loc.click(function (e) {
+    x = e.pageX; // pageX, pageY - 문서전체에서의 좌표값 clientX, screenX
+    y = e.pageY;
+
+    if (count%5 == 0 && count != 0) {
+      var love = setInterval(function() {
+        var r_size = 15; // 25 15
+        var m_size = 10;
+        var r_left = ((x-1100)/386)*100 + (0.5 - Math.random())*20;
+        var origin = parseFloat(Data.x[i]) + parseFloat(Data.w[i])/2;
+        var m_left = origin/1980*100 + (0.5 - Math.random())*20;
+        var r_time = 1 + Math.random()*4;
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+
+        $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(" + r + "," + g + "," + b + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease; animation-timing-function:ease-in;'></div>");
+        $('.origin_heart').append("<div class='heart' style='width:" + m_size + "px;height:" + m_size + "px;left:" + m_left + "%;background:rgba(" + r + "," + g + "," + b + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease; animation-timing-function:ease-in;'></div>");
+
+        $('.heart').each(function() {
+            var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+            var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+            if (top <= -100 || width >= 150) {
+                $(this).detach();
+            }
+        });
+        if (l == 20) {
+          clearInterval(love);
+          l = 0;
+        };
+        l++;
+      }, 100);
+      count++;
+    } else {
+      var love = setInterval(function() {
+        var r_size = 25; // 25 15
+        var m_size = 15;
+        var r_left = ((x-1100)/386)*100;
+        var origin = parseFloat(Data.x[i]) + parseFloat(Data.w[i])/2;
+        var m_left = origin/1980*100;
+        var r_time = 3;
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+
+        $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(" + r + "," + g + "," + b + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease; animation-timing-function:ease-in;'></div>");
+        $('.origin_heart').append("<div class='heart' style='width:" + m_size + "px;height:" + m_size + "px;left:" + m_left + "%;background:rgba(" + r + "," + g + "," + b + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease; animation-timing-function:ease-in;'></div>");
+
+        $('.heart').each(function() {
+            var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+            var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+            if (top <= -100 || width >= 150) {
+                $(this).detach();
+            }
+        });
+        clearInterval(love);
+        l++;
+      }, 100);
+      count++;
+    }
+});
+</script>
+
+
+ <script type="text/javascript">
+    d3.csv("smooth_location_21/jeongyeon.csv", function(data) { jeongyeonData = processData(data); });
+    d3.csv("smooth_location_21/jihyo.csv", function(data) { jihyoData = processData(data); });
+    d3.csv("smooth_location_21/sana.csv", function(data) { sanaData = processData(data); });
+    d3.csv("smooth_location_21/momo.csv", function(data) { momoData = processData(data); });
+    d3.csv("smooth_location_21/mina.csv", function(data) { minaData = processData(data); });
+    d3.csv("smooth_location_21/tzuyu.csv", function(data) { tzuyuData = processData(data); });
+    d3.csv("smooth_location_21/chaeyoung.csv", function(data) { chaeyoungData = processData(data); });
+    d3.csv("smooth_location_21/dahyun.csv", function(data) { dahyunData = processData(data); });
+    d3.csv("smooth_location_21/nayeon.csv", function(data) { nayeonData = processData(data); });
+
+    var like = [false,false,false,false,false,false,false,false,false];    
+
+    function sortObject(obj) {
+      var arr = [];
+      for (var prop in obj) {
+          if (obj.hasOwnProperty(prop)) {
+              arr.push({
+                  'key': prop,
+                  'value': obj[prop]
+              });
+          }
+      }
+      arr.sort(function(b, a) { return a.value - b.value; });
+      return arr;
+    }
+
+    twice_like = {'JeongYeon':0, 'JihYo':0, 'SaNa':0, 'MoMo':0, 'MiNa':0, 'TzuYu':0, 'ChaeYoung':0, 'DaHyun':0,'NaYeon':0}
+    
+    function add_click(){
+      if (like[0] == true){twice_like["JeongYeon"] = twice_like["JeongYeon"] + 1;} 
+      else if (like[1] == true){twice_like["JihYo"] = twice_like["JihYo"] + 1;} 
+      else if (like[2] == true){twice_like["SaNa"] = twice_like["SaNa"] + 1;} 
+      else if (like[3] == true){twice_like["MoMo"] = twice_like["MoMo"] + 1;} 
+      else if (like[4] == true){twice_like["MiNa"] = twice_like["MiNa"] + 1;} 
+      else if (like[5] == true){twice_like["TzuYu"] = twice_like["TzuYu"] + 1;} 
+      else if (like[6] == true){twice_like["ChaeYoung"] = twice_like["ChaeYoung"] + 1;} 
+      else if (like[7] == true){twice_like["DaHyun"] = twice_like["DaHyun"] + 1;} 
+      else if (like[8] == true){twice_like["NaYeon"] = twice_like["NaYeon"] + 1;} else{}
+
+      var arr = sortObject(twice_like);
+      document.getElementById("1_rank").innerHTML=arr[0].key;
+      document.getElementById("2_rank").innerHTML=arr[1].key;
+      document.getElementById("3_rank").innerHTML=arr[2].key;
+      document.getElementById("1_rank_2").innerHTML= "💖 " + arr[0].value;
+      document.getElementById("2_rank_2").innerHTML= "💖 " + arr[1].value;
+      document.getElementById("3_rank_2").innerHTML= "💖 " + arr[2].value;
+    }
+
+    function processData(data) {
+        var x = [];
+        var y = [];
+        var w = [];
+        var h = [];
+        data.forEach(function(row) {
+            x.push(row.x);
+            y.push(row.y);
+            w.push(row.w);
+            h.push(row.h);
+        })
+        return {
+            x: x,
+            y: y,
+            w: w,
+            h: h,
+        }
+    }
+
+    $(function() {
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      var video = document.getElementById('video');
+
+    document.getElementById('jeongyeon_btn').addEventListener('click', function(e) {
+      new Audio("audio.mp3").play();
+      $(".jeongyeon1").show();
+      $(".jeongyeon1").fadeOut({duration:2500});
+      Data = jeongyeonData; 
+      like = [true,false,false,false,false,false,false,false,false];
+    })
+    document.getElementById('jihyo_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".jihyo1").show();
+      $(".jihyo1").fadeOut({duration:2500});
+      Data = jihyoData;
+      like = [false,true,false,false,false,false,false,false,false];
+    })
+    document.getElementById('sana_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".sana1").show();
+      $(".sana1").fadeOut({duration:2500});
+      Data = sanaData;
+      like = [false,false,true,false,false,false,false,false,false];
+    })
+    document.getElementById('momo_btn').addEventListener('click', function(e) {
+      new Audio("audio.mp3").play();
+      $(".momo1").show();
+      $(".momo1").fadeOut({duration:2500});
+      Data = momoData;
+      like = [false,false,false,true,false,false,false,false,false];
+    })
+    document.getElementById('mina_btn').addEventListener('click', function(e) {
+      new Audio("audio.mp3").play();
+      $(".mina1").show();
+      $(".mina1").fadeOut({duration:2500}); 
+      Data = minaData; 
+      like = [false,false,false,false,true,false,false,false,false];
+    })
+    document.getElementById('tzuyu_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".tzuyu1").show();
+      $(".tzuyu1").fadeOut({duration:2500});
+      Data = tzuyuData;
+      like = [false,false,false,false,false,true,false,false,false];
+    })
+    document.getElementById('chaeyoung_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".chaeyoung1").show();
+      $(".chaeyoung1").fadeOut({duration:2500});
+      Data = chaeyoungData;
+      like = [false,false,false,false,false,false,true,false,false];
+    })
+    document.getElementById('dahyun_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".dahyun1").show();
+      $(".dahyun1").fadeOut({duration:2500});
+      Data = dahyunData;
+      like = [false,false,false,false,false,false,false,true,false];
+    })
+    document.getElementById('nayeon_btn').addEventListener('click', function(e) { 
+      new Audio("audio.mp3").play();
+      $(".nayeon1").show();
+      $(".nayeon1").fadeOut({duration:2500});
+      Data = nayeonData;
+      like = [false,false,false,false,false,false,false,false,true];
+    })
+    
+    i = 0;
+    j = 0;
+    fps = 1000 / 30;
+  
+    video.addEventListener('seeked', function(e) {
+        i = Math.round(e.srcElement.currentTime * 1000 / fps);
+    });
+
+    video.addEventListener('pause', function(e) {
+        j = Math.round(e.srcElement.currentTime * 1000 / fps);
+        for (var k = 1; k <= 21; k++) {
+          document.getElementById("debug_log_"+k).innerHTML=j-10+k+" frame, x : "+Math.round(Data.x[j-10+k])+", y : "+Math.round(Data.y[j-10+k])+", w : "+Math.round(Data.w[j-10+k])+", h : "+Math.round(Data.h[j-10+k]);
+        }
+    });
+  
+    video.addEventListener('play', function() {
+      $('#ad_videos')[0].pause();
+      $('#ad').fadeOut();
+        var $this = this; //cache
+        (function loop() {
+        if (!$this.paused && !$this.ended) {
+            if (typeof Data !== "undefined") {
+                var x = Data.x
+                var y = Data.y
+                var w = Data.w
+                var h = Data.h
+                ctx.drawImage($this, x[i], y[i], w[i], h[i], 0, 0, 386, 574);
+            }
+            i++;
+            setTimeout(loop, fps); // drawing at 30fps , object Event srcElement currentTime
+        }
+        })();
+    }, 0);
+  });
+</script>
+</html>

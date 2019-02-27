@@ -1,0 +1,247 @@
+.content video{
+  width: 100%;
+  height:100%;
+}
+
+canvas{
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1021px 55px 376px;
+  grid-template-rows: 55px 10px 579px 5px 30px;
+  margin: 16px;
+  padding: 0;
+  border-width: 3px;
+  border-style: outset;
+  border-color: rgb(245, 219, 219);
+  background-color: #000000;
+  margin-top: 30px;
+}
+
+.header {
+  grid-area: 1 / 1 / 2 / 4;
+  width: 1482px;
+  height: 65px;
+  margin-right:-50px; 
+}
+
+.content {
+  grid-area: 3 / 1 / 4 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color:#3a3636;
+  border-style: outset;
+  border-width:2px;
+  border-color: rgb(245, 219, 219);
+  margin-left: 15px;
+  margin-right: 0px;
+}
+
+.sidebar {
+  grid-area: 3 / 3 / 4 / 4;
+  border-style: solid;
+  background-color:#3a3636;
+  border-style: outset;
+  border-width:2px;
+  border-color: rgb(245, 219, 219);
+  margin-right: -15px;
+}
+
+.footer {
+  grid-area: 5 / 1 / 6 / 4;
+  text-align:start;
+  background-color: #000000;
+  margin-left: 15px;
+  margin-right: 5px;
+ }
+
+.like_overlay {
+  position: absolute;
+  top: 3px; 
+  left: 834px;
+  color: #000000; 
+  text-align: center;
+  font-size: 16px;
+  background-color: rgba(245, 245, 245, 0.8);
+  width: 180px;
+  height: 120px;
+  padding: 15px 1;
+  z-index: 2147483647;
+  opacity: 0.8;
+}
+
+#loc {
+  width: 800px;
+  height: 800px;
+  display: block;
+}
+
+html,body{
+ height:100%
+}
+
+.bg_heart {
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden
+}
+
+.origin_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+.heart {
+   position: absolute;
+   top: -50%;
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -m-transform: rotate(-45deg);
+   transform: rotate(-45deg)
+}
+
+.heart:before {
+   position: absolute;
+   top: -50%;
+   left: 0;
+   display: block;
+   content: "";
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   border-radius: 100%;
+}
+
+.heart:after {
+   position: absolute;
+   top: 0;
+   right: -50%;
+   display: block;
+   content: "";
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   border-radius: 100%;
+}
+
+.animated {
+  background-repeat: no-repeat;
+  padding-top:95px;
+  margin-bottom:60px;
+  -webkit-animation-duration: 10s;animation-duration: 10s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@-webkit-keyframes love {
+ 0% {opacity: 1;}
+ 100% {opacity: 0;}
+}
+@-moz-keyframes love {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-ms-keyframes love {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes love {
+  0% {opacity: 1; top:70%;}
+  100% {opacity: 0;}
+}
+
+.love {
+  animation-duration: 4000;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 110px; 
+  left: 45px;
+  width: 300px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 165px;
+  left: 45px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  width: 550px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 550px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 110px; 
+  left: 45px;
+  width: 300px;
+}
+
+/* Add some hover effects to buttons */
+.form-container{
+  opacity: 1;
+}
+
+.btn:hover{
+  opacity: 0.6;
+  border-color: rgb(232, 232, 241);
+}
+.btn:focus{
+  opacity: 0.6;
+  border-color:rgb(232, 232, 241);
+  color: rgb(255, 255, 255);
+  background-color: rgb(235, 4, 112);
+}
+.btn{
+  border-color: rgb(232, 232, 241);
+}
